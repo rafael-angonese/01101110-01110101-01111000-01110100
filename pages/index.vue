@@ -1,3 +1,7 @@
 <template>
-  <h1 class="text-5xl font-bold underline bg-purple-500">Hello world!</h1>
+  <div class="flex justify-center">
+    <div>
+      <h1 class="text-5xl font-bold">Hello world!</h1>
+    </div>
+  </div>
 </template>

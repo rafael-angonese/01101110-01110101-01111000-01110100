@@ -1,51 +1,48 @@
 <template>
-  <header class="text-gray-600 body-font bg-blue-500">
+  <header class="text-gray-600 body-font bg-primary-200">
     <div
-      class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      class="container mx-auto flex flex-wrap pt-4 flex-col md:flex-row items-center justify-center"
     >
-      <a
-        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-          ></path>
-        </svg>
-        <span class="ml-3 text-xl">Logipsun</span>
-      </a>
+      <Logo />
       <nav
-        class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center w-4/12"
       >
-        <a class="mr-5 hover:text-gray-900">First Link</a>
-        <a class="mr-5 hover:text-gray-900">Second Link</a>
-        <a class="mr-5 hover:text-gray-900">Third Link</a>
-        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+        <input
+          type="text"
+          placeholder="Buscar"
+          class="block w-full px-4 py-1 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+        />
       </nav>
-      <button
-        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-      >
-        Button
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-4 h-4 ml-1"
-          viewBox="0 0 24 24"
+      <div class="flex">
+        <NuxtLink
+        to="/teste"
+          class="block items-center justify-center text-center cursor-pointer mr-6"
         >
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </button>
+          <div
+            class="w-9 h-9 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400"
+          >
+            <IconsCart />
+          </div>
+          <p class="text-white mt-1">Carrinho</p>
+        </NuxtLink>
+
+        <NuxtLink
+          to="/login"
+          class="block items-center justify-center text-center cursor-pointer"
+        >
+          <div
+            class="w-9 h-9 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400"
+          >
+            <IconsProfile />
+          </div>
+          <p class="text-white mt-1">Meu Perfil</p>
+        </NuxtLink>
+      </div>
+    </div>
+    <div class="flex justify-center items-center space-x-14 mb-2">
+      <p class="cursor-pointer text-white mt-1">Engenheiro Virtual</p>
+      <p class="cursor-pointer text-white mt-1">Equipamentos</p>
+      <p class="cursor-pointer text-white mt-1">Kits Fechados</p>
     </div>
   </header>
 </template>
